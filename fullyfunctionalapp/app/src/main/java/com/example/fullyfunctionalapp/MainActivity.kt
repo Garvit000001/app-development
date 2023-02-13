@@ -8,12 +8,14 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        val btnIntent = findViewById<Button>(R.id.button1)
+        btnIntent.setOnClickListener{
+            intent=Intent(applicationContext,secondactivity::class.java)
+            startActivity(intent)
+
+
+        }
     }
-
-    val btnIntent = findViewById<Button>(R.id.button1)
-    btnIntent.setOnClickListener{
-
-
-    }
-
 }

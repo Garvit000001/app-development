@@ -9,13 +9,10 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Fullyfunctionalapp"
+        android:theme="@style/Theme.ORDERapp"
         tools:targetApi="31">
         <activity
-            android:name=".orderapp"
-            android:exported="false" />
-        <activity
-            android:name=".secondactivity"
+            android:name=".ShowOrder"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
