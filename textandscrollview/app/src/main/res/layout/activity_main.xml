@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+
+        app:srcCompat="@drawable/myphoto" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="center">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:text="Garvit Gupta
+Your Career, My Responsibility!  ❤️
+Please do like the video for the Youtube algorithm and SUBSCRIBE for more AMAZING content.
+
+Code : https://github.com/saumya1singh/30Day...
+
+I simplify programming and tech💡Excel in life and tech with me!
+
+
+✨For Tech  Career Growth Discussion✨
+Telegram: https://telegram.me/RiseTogetherTech
+Twitter: https://twitter.com/saumya1singh
+Instagram: https://www.instagram.com/saumya1singh
+LinkedIn: https://www.linkedin.com/in/saumya1singh
+Portfolio: https://saumyasingh.netlify.app
+Bio Tree: https://bio.link/saumya"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+
+        app:srcCompat="@drawable/myphoto" />
+
+
+
+</LinearLayout>
