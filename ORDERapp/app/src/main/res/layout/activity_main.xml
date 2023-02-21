@@ -7,7 +7,8 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
+<!--text search in design section and selected plain texxt for input
+which is known here as edit text-->
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
