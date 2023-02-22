@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "135860259529",
+    "project_id": "learning-database-934fd",
+    "storage_bucket": "learning-database-934fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135860259529:android:9dbbf2807a7be99dc69b18",
+        "android_client_info": {
+          "package_name": "com.example.databaseuiandux"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "135860259529-ivtpgh5btfgrtk0sjhl1knc89198g6i3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChJm7q1wWhM2qUo-jUDZewjOBLSRXWKwQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "135860259529-ivtpgh5btfgrtk0sjhl1knc89198g6i3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
