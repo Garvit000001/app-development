@@ -94,4 +94,12 @@
         android:layout_gravity="center"
         android:layout_height="wrap_content"
         android:text="Sign Up " />
+
+    <TextView
+        android:id="@+id/tVSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="If already registered ,click SIGN IN" />
 </LinearLayout>

@@ -1,8 +1,10 @@
  package com.example.databaseuiandux
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.database.DatabaseReference
@@ -45,6 +47,12 @@ import com.google.firebase.database.FirebaseDatabase
 
 
             }
+        }
+
+        val signInText=findViewById<TextView>(R.id.tVSignIn)
+        signInText.setOnClickListener{
+            val opensigninactivity= Intent(this,signinactivity::class.java)
+            startActivity(opensigninactivity)
         }
     }
 }
