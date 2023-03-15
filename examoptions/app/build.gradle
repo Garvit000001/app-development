@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.alertdialogue'
+    namespace 'com.example.examoptions'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.alertdialogue"
+        applicationId "com.example.examoptions"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -23,7 +23,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    buildFeatures {
+    buildFeatures{
         viewBinding=true
     }
     compileOptions {
