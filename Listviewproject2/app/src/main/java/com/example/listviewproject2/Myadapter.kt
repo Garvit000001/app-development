@@ -10,8 +10,7 @@ import de.hdodenhof.circleimageview.CircleImageView
 
 //array adapter jo builtin hota hai m chahta hoon ki hmara adappter usko bhi use kar paye hmara adapter
 class Myadapter(private val context: Activity, val arrayList: ArrayList<User>) :
-    ArrayAdapter<User>(context,R.layout.eachitem,R.id.tVlastMsg,arrayList
-    ) {
+    ArrayAdapter<User>(context,R.layout.eachitem,arrayList) {
 //getview method is inside ArrayAdapter ie why we have extended it
     //aur humne iska use karke eachrow ko uthaya aur usme values dal di  name lastmsg etc
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
@@ -33,6 +32,6 @@ class Myadapter(private val context: Activity, val arrayList: ArrayList<User>) :
 
 
 
-        return super.getView(position, convertView, parent)
+        return view
     }
 }
