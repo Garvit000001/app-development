@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
@@ -12,9 +14,15 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var recyclerView: RecyclerView
+    lateinit var myAdapter: MyAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        recyclerView=findViewById(R.id.recyclerview)
 
 //        4stepsforapi
         //step 1 set depemdency of gson and corresponding api
@@ -39,16 +47,17 @@ class MainActivity : AppCompatActivity() {
                 var responseBody=response.body()
                 val productlist=responseBody?.products!!
 
-                val collectdatainstringbuilder=StringBuilder()
+            val myAdapter=MyAdapter(this@MainActivity,productlist)
+            recyclerView.adapter=myAdapter
+            recyclerView.layoutManager=LinearLayoutManager(this@MainActivity)
 
+//                val collectdatainstringbuilder=StringBuilder()
 //            if (productlist != null) {//we can also use products!! above if we da=ont want to write thisline
-                for(myData in productlist){
-                    collectdatainstringbuilder.append(myData.title+ " ")
-
-                }
-            val tv=findViewById<TextView>(R.id.textview)
-            tv.text=collectdatainstringbuilder
-
+//                for(myData in productlist){
+//                    collectdatainstringbuilder.append(myData.title+ " ")
+//                }
+//            val tv=findViewById<TextView>(R.id.textview)
+//            tv.text=collectdatainstringbuilder
 //            }
         }
 
