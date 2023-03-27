@@ -4,7 +4,9 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Build
@@ -29,12 +31,17 @@ class MainActivity : AppCompatActivity() {
         createNotificationChannel()
         //it will create notification channel
 
+        //Pending Intent
+        val intent= Intent(this,MainActivity::class.java)
+        val pendingIntent= PendingIntent.getActivity(this,0,intent,PendingIntent.FLAG_MUTABLE)
+
         //now we will create channel
         val notification=NotificationCompat.Builder(this,CHANNEL_ID)
             .setContentTitle("30 days of app development")
             .setContentText("Congratulations for showing up today")
             .setSmallIcon(R.drawable.baseline_insert_emoticon_24)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .setContentIntent(pendingIntent)
             .build()
 
 
