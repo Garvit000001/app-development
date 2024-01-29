@@ -9,11 +9,12 @@ import androidx.annotation.RequiresApi
 
 class MainActivity : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.O)
+    lateinit var webview: WebView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val webview=findViewById<WebView>(R.id.Webview)
+        supportActionBar?.hide()
+        webview=findViewById<WebView>(R.id.Webview)
         webviewSetUp(webview)
     }
 
@@ -23,10 +24,18 @@ class MainActivity : AppCompatActivity() {
         webView.apply{
             settings.safeBrowsingEnabled=true
             settings.javaScriptEnabled=true
-            loadUrl("https://9900riya.github.io/portfolio.github.io/")
+            loadUrl("https://whatsapp.com/")
 
         }
 
+    }
+
+    override fun onBackPressed() {
+        if(webview.canGoBack()){
+            webview.goBack()
+        }else {
+            super.onBackPressed()
+        }
     }
 
 
